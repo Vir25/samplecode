@@ -1,0 +1,180 @@
+/**
+ * The menu is technically the header of the site, it contains the styles for the drop down of the Search Bar.
+ *
+ */
+
+$lineHeightForNav: 70px;
+$lineHeightForSearch: 50px;
+
+
+header.menu {
+
+    // ...
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    div.menu-container {
+        width: 100%;
+        background-color: #040a2b;
+        padding: 0 20px;
+        text-align: left;
+        
+        div.menu-holder {
+            position: relative;
+            width: 100%;
+            max-width: $siteWidth;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+            line-height: $lineHeightForNav;
+            color: white;
+            text-align: left;
+            display: inline-block;
+        }
+        nav {
+            display: inline-block;
+            margin-left: 60px;
+
+            i { 
+                color: white; 
+                font-size: 30px;
+                line-height: $lineHeightForNav;
+            }
+            i.search {
+                position: absolute;
+                right: 10px;
+                top: 0;
+            }
+
+            a.nav-item {
+                font-family: Helvetica, Arial, Sans-Serif;
+                font-size: 17px;
+                line-height: $lineHeightForNav;
+                text-transform: uppercase;
+                text-decoration: none;
+                white-space: nowrap;
+                border-bottom: 1px solid transparent;
+                color: #FFF;
+                margin-right: 20px;
+            }
+        }
+    }
+
+    div.search-container {
+        position: absolute;
+        background-color: white;
+        z-index: 20;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        width: 100%;
+        padding: 5px;
+        background-color: white;
+        border-bottom: 1px solid #CCC;
+        display: none;
+        &.showing { display: block; }
+        
+        input[type='text'] {
+            min-width: 100%;
+            font-size: 36px;
+            line-height: $lineHeightForSearch;
+            border: 1px solid #CCC;
+            padding: 0 10px;
+        }
+
+        i.close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            font-size: 36px;
+            line-height: $lineHeightForSearch;
+        }
+    }
+
+    div.list-product-container{ 
+        width: 100%;
+        float: left;
+        padding: 1%;
+        border-bottom: 0.01em solid #dddbdb;
+    }
+    div.list-product-container-item {
+        float: left;
+        width: 22%;
+        border-radius: 2%;
+        margin: 1%;
+        img {
+            
+            width: 100%;
+            overflow: hidden;
+            border-radius: 2% 2% 0 0;
+            // width: 320px;
+            // height: 320px;
+            // object-fit: cover;
+            transition: transform 1.5s ease-out;
+            filter: sepia(.2);
+            
+            &:hover {
+                transform: translateZ(0) scale(1.2);
+            }
+        }
+        
+        .list-product-container-item:hover {
+            box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+            -webkit-box-shadow: 1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);  
+            -moz-box-shadow:    1.5px 1.5px 2.5px 3px rgba(0, 0, 0, 0.4);
+        }
+  
+        .image-box {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 2% 2% 0 0;
+        }
+        
+        .images {
+            height: 15em;
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat;
+            border-radius: 2% 2% 0 0;
+            transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+        }
+        
+        .images:hover {
+            transform: scale(1.2);
+            overflow: hidden;
+            border-radius: 2%;
+        }
+
+        h2{
+            float: left;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            text-transform: uppercase;
+            margin: 0.2em auto;
+            font-size: 12px;
+          }
+          h4 {
+            float: left;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-size: 1em;
+            text-transform: uppercase;
+            margin: 0.2em auto;
+            font-size: 8px;
+          }
+          .item {
+            clear: left;
+            width: 100%;
+            text-align: center;
+          }
+          
+    }
+    
+}
